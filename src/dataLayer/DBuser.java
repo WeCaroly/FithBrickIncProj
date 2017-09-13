@@ -12,9 +12,10 @@ public class DBuser {
     //JDB driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 
-    static final String DB_URL = "jdbc:mysql://localhost/webbapplogin";
+    //static final String DB_URL = "jdbc:mysql://localhost/webbapplogin";
+    static final String DB_URL = "jdbc:mysql://aa19qfog95k5ari.cmg7kglbmqka.us-east-1.rds.amazonaws.com:3306/webbapplogin";
 
-    private static final String USER = "webappuser";
+    private static final String USER = "root";
     static final String PASS = "password";
 
     public boolean isValidUserLogin(String sUsername, String sPassowrd){
@@ -43,7 +44,7 @@ public class DBuser {
 
             sql = "SELECT * FROM users WHERE username = \"" + sUsername
                     + "\" AND password = \"" + sPassowrd+ "\"" ;
-            //System.out.print(sql);
+            System.out.println(sql);
 
             ResultSet rs = stmt.executeQuery(sql);
 
