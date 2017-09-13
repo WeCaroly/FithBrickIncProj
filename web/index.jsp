@@ -11,10 +11,11 @@
     <title>Log in</title>
   </head>
   <body>
-    Hewwo world
+    Landing page -> add /login.jsp to the url and use the log in
+    -> carolyn, password
   <%
     Date date = new Date();
-    out.print("<h2>" + date.toString() +"</h2>");
+    out.print("<h2>" + " It is: "+ date.toString() +"</h2>");
   %>
   </body>
 </html>

@@ -1,6 +1,9 @@
 package dataLayer;
 
+import webapp.todo;
+
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DBuser {
 
@@ -17,7 +20,7 @@ public class DBuser {
 
         Connection con = null;
         Statement stmt = null;
-        String sql = null;
+        String sql;
 
         //look up in dataBase
 
@@ -66,4 +69,111 @@ public class DBuser {
         System.out.print("closed the DB!");
         return isValid;
     }
+    public ArrayList<todo> getTodo(){
+        Connection con = null;
+        Statement stmt = null;
+        String sql;
+        ArrayList<todo> list = new ArrayList<todo>();
+        //look up in dataBase
+
+        //step 2 register JDBC driver
+        try {
+            Class.forName(JDBC_DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try{//step 3 open connection
+
+            System.out.print("\nConnecting to db....");
+            con = DriverManager.getConnection(DB_URL,USER,PASS);
+
+            //step 4
+            System.out.print("\ncreating statement.... ");
+            stmt = con.createStatement();
+
+            sql = "SELECT * FROM todo";
+            //System.out.print(sql);
+
+            ResultSet rs = stmt.executeQuery(sql);
+
+            //step 5 extract data from result set
+
+            while (rs.next()) {
+                todo newItem = new todo();
+                String id = rs.getString("id");
+                String todo = rs.getString("TODO");
+                String user = rs.getString("user");
+                newItem.setTodo(id);
+                newItem.setTodo(todo);
+                newItem.setUser(user);
+                list.add(newItem);
+                System.out.print(newItem.getTodo()+ " = " + newItem.getUser());
+            }
+
+            //step 6 close up db
+            rs.close();
+            stmt.close();
+            con.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            //use to close
+            try{
+                if(stmt!=null){
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.print("\nclosed the DB!");
+        return list;
+    }
+
+    public void setTodo(todo newItem) {
+        Connection con = null;
+        Statement stmt = null;
+        String sql;
+        ArrayList<todo> list = new ArrayList<todo>();
+        //look up in dataBase
+
+        //step 2 register JDBC driver
+        try {
+            Class.forName(JDBC_DRIVER);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {//step 3 open connection
+
+            System.out.print("\nConnecting to db....");
+            con = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //step 4
+            System.out.print("\ncreating statement.... ");
+            stmt = con.createStatement();
+
+            sql = "INSERT INTO todo (`TODO`, `user`) VALUES (newItem.todo, newItem.user); ";
+            ResultSet rs = stmt.executeQuery(sql);
+
+            //step 5 close up db
+            rs.close();
+            stmt.close();
+            con.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            //use to close
+            try {
+                if (stmt != null) {
+                    con.close();
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.print("\nclosed the DB!");
+    }
+
 }

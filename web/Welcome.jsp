@@ -1,4 +1,6 @@
-<%--
+<%@ page import="webapp.todo" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="appLayer.User" %><%--
   Created by IntelliJ IDEA.
   User: carol_8wybosj
   Date: 9/12/2017
@@ -15,8 +17,20 @@
 <p>Hello! ${username}</p>
 <form action="/todo" method="post">
     <input type="text" value="todo"/>
-    <input type="submit"/>
+    <input type="submit" value="Submit"/>
 </form>
+<%
+    User user = new User();
+    ArrayList<todo> List = user.getTodoUser();
+   int i = 0;
+   int max = List.size();
+    request.setAttribute("eList",List);
+%>
+<%while(i<max) {%>
+<%= i+1%>. <%=  List.get(i).getTodo()%>
+<br/>
+<% i++;} %>
+
 
 </body>
 </html>
