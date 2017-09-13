@@ -14,10 +14,10 @@
 </head>
 <body>
 <h1>Todo</h1>
-<p>Hello! ${username}</p>
+<p>Add items to the List!</p>
 <form action="/todo" method="post">
-    <input type="text" value="todo"/>
-    <input type="submit" value="Submit"/>
+    <input type="text" name="todoBox"/>
+    <input type="submit" value="Submit" onclick=""/>
 </form>
 <%
     User user = new User();

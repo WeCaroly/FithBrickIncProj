@@ -2,6 +2,8 @@ package dataLayer;
 
 import webapp.todo;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -150,14 +152,20 @@ public class DBuser {
             con = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //step 4
-            System.out.print("\ncreating statement.... ");
+            System.out.print("\ncreating statement.... \n");
             stmt = con.createStatement();
 
-            sql = "INSERT INTO todo (`TODO`, `user`) VALUES (newItem.todo, newItem.user); ";
-            ResultSet rs = stmt.executeQuery(sql);
+            String todoItem = newItem.getTodo();
+            String userItem = newItem.getUser();
+            if (userItem == null) userItem = "carolyn";
+            if(todoItem != null ) {
+                //sql = "INSERT INTO todo (TODO, user) VALUES (" + todoItem + "," + userItem + ");";
+                sql = "INSERT INTO todo (TODO, user) VALUES (\'"+ todoItem +"\',\'"+ userItem +"\');";
+                System.out.println(sql);
+                int rs = stmt.executeUpdate(sql);
+        }
+           //step 5 close up db
 
-            //step 5 close up db
-            rs.close();
             stmt.close();
             con.close();
 

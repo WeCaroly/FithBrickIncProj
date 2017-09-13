@@ -16,12 +16,19 @@ public class todoSubmit extends HttpServlet {
     User user = new User();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        out.print("Do post: \ntodo:"+ request.getParameter("todo"));
+        out.print("Do post: \ntodo:"+ request.getParameter("todoBox"));
+
+
+        todo newItem = new todo();
+        newItem.setUser(request.getParameter("username"));
+        newItem.setTodo(request.getParameter("todoBox"));
+        user.setTodo(newItem);
 
         request.getRequestDispatcher("/Welcome.jsp").forward(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        doPost(request,response);
     }
 }

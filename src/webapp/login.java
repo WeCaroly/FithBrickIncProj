@@ -37,5 +37,6 @@ public class login extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.print("do get: \nlogin-name:"+ request.getParameter("loginname")+
         " \npassword"+ request.getParameter("password"));
+        doPost(request,response);
     }
 }
