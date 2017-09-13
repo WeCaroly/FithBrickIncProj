@@ -164,7 +164,7 @@ public class DBuser {
                 System.out.println(sql);
                 int rs = stmt.executeUpdate(sql);
         }
-           //step 5 close up db
+           //step 5 close up db no changed?
 
             stmt.close();
             con.close();
