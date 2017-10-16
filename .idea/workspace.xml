@@ -496,7 +496,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1508113447379</updated>
-      <workItem from="1508113452799" duration="11547000" />
+      <workItem from="1508113452799" duration="11575000" />
     </task>
     <task id="LOCAL-00001" summary="New Files added and hooked up to AWS">
       <created>1508195050752</created>
@@ -505,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508195050752</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Files added and hooked up to AWS">
+      <created>1508195561969</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1508195561969</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11547000" />
+    <option name="totallyTimeSpent" value="11575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1551" height="847" extended-state="6" />
