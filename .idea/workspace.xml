@@ -477,11 +477,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508258823693</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added more to watchlist.">
+      <created>1508258839721</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1508258839721</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14537000" />
+    <option name="totallyTimeSpent" value="14563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1551" height="847" extended-state="6" />
