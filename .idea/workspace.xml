@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cc101a2-29f5-4402-a3c5-fd1d7562d310" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/main.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/Completed.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/WatchlistPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/WatchlistPage.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/registrationPage.jsp" afterPath="$PROJECT_DIR$/out/artifacts/FithBrickIncProj_war_exploded/registrationPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WatchlistPage.jsp" afterPath="$PROJECT_DIR$/web/WatchlistPage.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/registrationPage.jsp" afterPath="$PROJECT_DIR$/web/registrationPage.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -474,11 +470,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508195561969</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added more to watchlist.">
+      <created>1508258823693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1508258823693</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14510000" />
+    <option name="totallyTimeSpent" value="14537000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1551" height="847" extended-state="6" />
@@ -546,7 +549,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="New Files added and hooked up to AWS" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Files added and hooked up to AWS" />
+    <MESSAGE value="Added more to watchlist." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more to watchlist." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
