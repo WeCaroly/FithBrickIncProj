@@ -19,7 +19,7 @@
     &nbsp;&nbsp;&nbsp;password:&nbsp;<input type="text" name="password" width="10"/>
     <br><br>
     <input type="submit" value="Submit" src="http://www.pngmart.com/files/3/Submit-Button-Transparent-PNG.png"
-        	style="width: 200px; padding-bottom: 50px;"/>
+        	/>
 </form>
     <form action="registrationPage.jsp" method="get">
         <input type="submit" value="Register" style="width: 200px;padding-bottom: 50px;" src="registrationPage.jsp"/>
