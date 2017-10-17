@@ -8,11 +8,9 @@
             padding: 0;
             overflow: hidden;
         }
-
         li {
             float: left;
         }
-
         li a {
             display: block;
             padding: 8px;
@@ -29,6 +27,7 @@
 
 </ul>
 <h1>WatchList</h1>
+
 
 
 </body>
